@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(50deg, #061ce3af, #e306c99c);
+    font-family: Permanent Marker, Poppins;
+    color: rgb(10, 8, 8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+  width: 300px;
+  height: 450px;
+  /* background-image: url(birthdayPicture.jpg); */
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+.container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+.card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1700ms;
+    transform-style: preserve-3d;
+}
+.frontal, .back{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, .25);
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+.frontal{
+    background-image: url(birthdayPicture.jpg);
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+    gap: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    
+}
+.frontal p{
+    font-size: 20px;
+    font-weight: 700;
+}
+.back{
+    background-color: #3a3a3a70;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+}
+.back p{
+    margin-top: 1rem;
+}
+.my-img{
+    position: relative;
+    height: 150px;
+    width: 150px;
+}
+.my-img .img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   border-radius: 50%;
+}
